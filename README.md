@@ -1,7 +1,7 @@
 # Placement Prediction
 Campus recruitment is a strategy for sourcing, engaging and hiring young talent for internship and entry-level positions. College recruiting is typically a tactic for medium- to large-sized companies with high-volume recruiting needs, but can range from small efforts (like working with university career centers to source potential candidates) to large-scale operations (like visiting a wide array of colleges and attending recruiting events throughout the spring and fall semester). Campus recruitment often involves working with university career services centers and attending career fairs to meet in-person with college students and recent graduates. Some industries participate in campus recruiting more than others; finance, technology, business consulting, manufacturing and engineering are a few of the most popular.
 
-![](https://github.com/abhisheks008/ML-ProjectKart/blob/patch-29/Campus%20Recruitment%20-%20Analysis%20and%20Prediction/Images/camp13.jpg)
+![](https://github.com/mv1249/Placement-Predictor/blob/main/placement.jpg)
 
 ## Dataset
 The dataset is collected from Kaggle website. Here is the link for the dataset : https://www.kaggle.com/benroshan/factors-affecting-campus-placement?select=Placement_Data_Full_Class.csv. I have uploaded the same in [`Dataset`](https://github.com/abhisheks008/ML-ProjectKart/tree/patch-29/Campus%20Recruitment%20-%20Analysis%20and%20Prediction/Dataset) folder too, you can access that!
