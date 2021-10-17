@@ -29,5 +29,4 @@ The goal of this project is to analyze the factors that can effect the Campus Re
 
 9. **Majority of the packages will be in the region of 2-4 LPA.**
 
-10. For the prediction model, the best fitted algorithm is **XgBoost Classifier Algorithm** with an accuracy score of 0.79.
 
