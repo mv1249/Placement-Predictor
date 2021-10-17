@@ -1,4 +1,4 @@
-# Campus Recruitment - Analysis and Prediction
+# Placement Prediction
 Campus recruitment is a strategy for sourcing, engaging and hiring young talent for internship and entry-level positions. College recruiting is typically a tactic for medium- to large-sized companies with high-volume recruiting needs, but can range from small efforts (like working with university career centers to source potential candidates) to large-scale operations (like visiting a wide array of colleges and attending recruiting events throughout the spring and fall semester). Campus recruitment often involves working with university career services centers and attending career fairs to meet in-person with college students and recent graduates. Some industries participate in campus recruiting more than others; finance, technology, business consulting, manufacturing and engineering are a few of the most popular.
 
 ![](https://github.com/abhisheks008/ML-ProjectKart/blob/patch-29/Campus%20Recruitment%20-%20Analysis%20and%20Prediction/Images/camp13.jpg)
@@ -28,5 +28,91 @@ The goal of this project is to analyze the factors that can effect the Campus Re
 8. Unlike the case for 10th board, more students opted for state boards in their 12th examinations. The performance of state board students was better as more students from state board of 12th were placed. However, the placed/unplaced ratio for both is nearly identical once again. Hence, **12th board is not playing a significant role once again.**
 
 9. **Majority of the packages will be in the region of 2-4 LPA.**
+
+# Deployment on Azure Cloud
+
+## Set up your initial environment
+<ol>
+<li>Have an Azure account with an active subscription. <a href="https://azure.microsoft.com/free/?ref=microsoft.com&amp;utm_source=microsoft.com&amp;utm_medium=docs&amp;utm_campaign=visualstudio" data-linktype="external">Create an account for free</a>.</li>
+<li>Install <a href="https://www.python.org/downloads/" target="_blank" data-linktype="external">Python 3.6 or higher</a>.</li>
+<li>Install the <a href="/en-us/cli/azure/install-azure-cli" target="_blank" data-linktype="absolute-path">Azure CLI</a>, with which you run commands in any shell to provision and configure Azure resources.</li>
+</ol>
+
+## Commands for the CLI 
+
+<br>
+
+##### Check the Python Version 
+
+```
+ py -3 --version
+
+```
+
+##### Check the Azure CLI Version 
+
+```
+az --version
+
+```
+
+##### Then sign in to Azure through the CLI:
+
+```
+az login
+
+```
+ A tab will be opened in the browser,login into you're registered azure account,
+
+
+Post successfull login,go to the folder where the code files are present,using the `cd` command as shown ↓
+ 
+
+```
+cd <project folder>
+
+```
+
+Once the control is inside the project folder,you need to install all the requirements which are mentioned in the `requirements.txt` file,but before that we need to create a virtual environment!,it is very important,so for creating a `virtual environment` follow the commands 
+
+```
+py -3 -m venv .venv
+```
+
+The above ↑ command will create a virtual environment,then type in 
+
+```
+.venv\scripts\activate
+```
+
+This command is to activate the virtual environment,after this type in 
+
+```
+pip install -r requirements.txt
+```
+
+By this command you will install all the packages which are mentioned in the `requirements.txt` file,into the virtual environment,once this is done,the task is almost 80% completed,after this inorder to check if the `Flask` App is running successfully on local host run this command
+
+```
+flask run
+```
+If you face any error while running this command,check out whether you're in the same directory where your `app.py` is residing or not,Once this command is successfully executed,the last step is to deploy the flask app on the `Azure` Platform,so for that follow the following command ↓
+
+```
+az webapp up --sku B1 --name <app-name>
+```
+
+This will take sometime,after completion of this command,you'll find something like this ↓ in your cmd (for example!)
+
+```
+{
+  "URL": "https://campusplacementpredictor.azurewebsites.net/",
+  
+}
+```
+Copy that url from `URL` and that is your deployment of the web app on the Azure cloud.
+
+
+
 
 
